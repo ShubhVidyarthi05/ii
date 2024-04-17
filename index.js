@@ -53,13 +53,13 @@ tippy('.material-symbols-outlined-1', {
             if(totalIncome > 8){
                 switch(age){
                     case '<40':
-                        tax = 0.3 * (totalIncome - 8);
+                        tax = 0.3 * (totalIncome - 800000);
                         break;
                     case '>=40&<60':
-                        tax = 0.4 * (totalIncome - 8);
+                        tax = 0.4 * (totalIncome - 800000);
                         break;
                     case '>=60':
-                        tax = 0.1 * (totalIncome - 8);
+                        tax = 0.1 * (totalIncome - 800000);
                         break;
                 }
             }
