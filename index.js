@@ -78,6 +78,3 @@ tippy('.material-symbols-outlined-1', {
         }
     });
 });
-$(document).ready(function(){
-$('[data-toggle="tooltip"]').tooltip();
-});
