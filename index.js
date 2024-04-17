@@ -49,16 +49,16 @@ tippy('.material-symbols-outlined-1', {
         if(valid){
             let totalIncome = income + extraIncome - deductions;
             let tax = 0;
-
-            if(totalIncome > 8){
-                switch(age){
-                    case '<40':
+            console.log(deductions);
+            if(totalIncome > 800000){
+                switch(true){
+                    case age=== '<40':
                         tax = 0.3 * (totalIncome - 800000);
                         break;
-                    case '>=40&<60':
+                    case age=== '>=40&<60':
                         tax = 0.4 * (totalIncome - 800000);
                         break;
-                    case '>=60':
+                    case age=== '>=60':
                         tax = 0.1 * (totalIncome - 800000);
                         break;
                 }
