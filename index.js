@@ -1,5 +1,14 @@
-tippy('.material-symbols-outlined', {
+tippy('.material-symbols-outlined-1', {
     content: 'Gross annual income is your total salary in a year before any deductions',
+  });
+  tippy('.material-symbols-outlined-2', {
+    content: 'Extra income is your income from other sources',
+  });
+  tippy('.material-symbols-outlined-3', {
+    content: 'Your age group',
+  });
+  tippy('.material-symbols-outlined-4', {
+    content: 'Deductions made in your income',
   });
 
   $(document).ready(function(){
@@ -55,7 +64,7 @@ tippy('.material-symbols-outlined', {
                 }
             }
 
-            $('#taxAmount').text(`Tax Amount: ${tax.toFixed(2)} Lakhs`);
+            $('#taxAmount').text(`${tax.toFixed(2)}`);
             $('#resultModal').modal('show');
         }
     });
