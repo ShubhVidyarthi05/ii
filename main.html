@@ -4,9 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tax Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,0" />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 </head>
 <body>
-    <script src="index.js"></script>
+
+<div class="container mt-5">
+    <h2>Tax Calculator</h2>
+    <form id="taxForm">
+        <div class="form-group">
+            <label for="income">Enter Gross Annual Income
+                <span class="material-symbols-outlined">
+                help
+                </span></label>
+            <input class="form-control" id="income" pattern="^[1-9][0-9]*$" placeholder="Enter gross annual income" required>
+        </div>
+
+        <div class="form-group">    
+            <label for="extraIncome">Enter Extra Income
+                <span class="material-symbols-outlined">
+                help
+                </span></label>
+            <input type="number" class="form-control" id="extraIncome" pattern="^[1-9][0-9]*$" placeholder="Enter extra income from other sources">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <select class="form-control" id="age" required>
+                <option value="<40"><40</option>
+                <option value=">=40&<60">≥ 40 & < 60</option>
+                <option value=">=60">≥ 60</option>
+            </select>
+            <div class="invalid-feedback">Age is mandatory</div>
+        </div>
+        
+        
+        <div class="form-group">
+            <label for="deductions">Enter total applicable Deductions
+                <span class="material-symbols-outlined">
+                    help
+                    </span>
+            </label>
+            <input type="number" class="form-control" id="deductions" pattern="^[1-9][0-9]*$">
+            <div class="invalid-feedback">Please enter a valid deduction amount</div>
+        </div>
+        <button type="button" class="btn btn-primary" id="calculate">Calculate</button>
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="resultModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Tax Calculation Result</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="taxAmount"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="index.js">
+    
+</script>
+
 </body>
 </html>
